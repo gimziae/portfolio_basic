@@ -1,0 +1,353 @@
+.department{
+    .sub_visual{
+        background: url(../img/insta8.jpg) no-repeat center/cover;
+    }
+
+    .division{
+        width: 100%;
+        height: 600px;
+        background: url(../img/bgDIvision.jpg) no-repeat center/contain;
+        /*짤리면 안되니까 contain*/ 
+
+        .div_tree{
+            position: absolute;
+            top: -999999px;
+            opacity: 0;
+            transition: 1s;
+            //반응형에서 살릴거임
+            //transition 주는 이유 
+            //  : mobile크기로 줄일 때 스무스하게 바뀌게 하기 위해
+
+            li{
+                span{
+                    display: block;
+                    width: 40%;
+                    height: 50px;
+                    background: rgb(17, 17, 17);
+                    font: bold 13px/50px 'arial';
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 25px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    //나머지 자식태그들이 이 안에서만 놀 수 있게 relative 줌
+
+                    //세로연결선 만들기
+                    //after는 요소 하단에 생성
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        height: calc(70px * 17 - 25px);
+                        //)height + margin-bottom = 70px) * 하위요소 갯수 17개 - height/2
+                        background: #555;
+                        position: absolute;
+                        top: 50px;
+                        left: 50px;
+                        //뜯어서 위치 선정해주기 위해 absolute를 걸어준다.
+                        
+                    }
+                }
+
+                //2depth
+                ul li{
+                    span{
+                        background: #666;
+                        transform: translateX(70px);
+                        // 첫번째 ul li 안에 있는 두번재 ul li를 구분 지어 주기 위해 배경색과 위치를 변경해주는 것
+
+                        //가로연결선 만들기
+                        //before는 요소 상단에 생성
+                        //왜? 1번째는 필요 없으니까 2번째부터 만들기
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 20px;
+                            height: 1px;
+                            background: #555;
+                            position: absolute;
+                            top: 25px;
+                            left: -20px;
+                        }
+
+                        
+                    }
+
+                    //2depth li
+                    //1depth li 에서 줬던 after값이 마지막 li까지 공통적으로 적용되어 있으므로 
+                    //해당되는 li에서 따로 after값을 필요한만큼 길이를 조정해줘야한다
+                    &:nth-of-type(1) span::after{
+                        display: none;
+                    }
+                    &:nth-of-type(2) span::after{
+                        display: none;
+                    }
+                    &:nth-of-type(3) span::after{
+                        height: calc(70px * 2 - 25px);
+                    }  
+                    &:nth-of-type(4) span::after{
+                        height: calc(70px * 3 - 25px);
+                    }
+                    &:nth-of-type(5) span::after{
+                        height: calc(70px * 2 - 25px);
+                    }
+                    &:nth-of-type(6) span::after{
+                        height: calc(70px * 3 - 25px);
+                    }
+                    &:nth-of-type(7) span::after{
+                        height: calc(70px * 2 - 25px);
+                    }
+
+                    //3depth
+                    ul li{
+                        span{
+                            background: #999;
+                            transform: translateX(140px);
+
+
+                            //3depth에는 하위요소가 없기 때문에 after값이 필요 없으므로
+                            //none 처리 해준다.
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*tablet--------------------------------*/ 
+@media screen and (max-width:$tablet){
+    .department{
+        .division{
+
+            height: 60vw;
+
+            .div_tree{
+                position: absolute;
+                top: -999999px;
+                opacity: 0;
+                //반응형에서 살릴거임
+    
+                li{
+                    span{
+                        display: block;
+                        width: 40%;
+                        height: 50px;
+                        background: rgb(17, 17, 17);
+                        font: bold 13px/50px 'arial';
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 25px;
+                        margin-bottom: 20px;
+                        position: relative;
+                        //나머지 자식태그들이 이 안에서만 놀 수 있게 relative 줌
+    
+                        //세로연결선 만들기
+                        //after는 요소 하단에 생성
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: calc(70px * 17 - 25px);
+                            //)height + margin-bottom = 70px) * 하위요소 갯수 17개 - height/2
+                            background: #555;
+                            position: absolute;
+                            top: 50px;
+                            left: 50px;
+                            //뜯어서 위치 선정해주기 위해 absolute를 걸어준다.
+                            
+                        }
+                    }
+    
+                    //2depth
+                    ul li{
+                        span{
+                            background: #666;
+                            transform: translateX(70px);
+                            // 첫번째 ul li 안에 있는 두번재 ul li를 구분 지어 주기 위해 배경색과 위치를 변경해주는 것
+    
+                            //가로연결선 만들기
+                            //before는 요소 상단에 생성
+                            //왜? 1번째는 필요 없으니까 2번째부터 만들기
+                            &::before{
+                                content: '';
+                                display: block;
+                                width: 20px;
+                                height: 1px;
+                                background: #555;
+                                position: absolute;
+                                top: 25px;
+                                left: -20px;
+                            }
+    
+                            
+                        }
+    
+                        //2depth li
+                        //1depth li 에서 줬던 after값이 마지막 li까지 공통적으로 적용되어 있으므로 
+                        //해당되는 li에서 따로 after값을 필요한만큼 길이를 조정해줘야한다
+                        &:nth-of-type(1) span::after{
+                            display: none;
+                        }
+                        &:nth-of-type(2) span::after{
+                            display: none;
+                        }
+                        &:nth-of-type(3) span::after{
+                            height: calc(70px * 2 - 25px);
+                        }  
+                        &:nth-of-type(4) span::after{
+                            height: calc(70px * 3 - 25px);
+                        }
+                        &:nth-of-type(5) span::after{
+                            height: calc(70px * 2 - 25px);
+                        }
+                        &:nth-of-type(6) span::after{
+                            height: calc(70px * 3 - 25px);
+                        }
+                        &:nth-of-type(7) span::after{
+                            height: calc(70px * 2 - 25px);
+                        }
+    
+    
+    
+                        //3depth
+                        ul li{
+                            span{
+                                background: #999;
+                                transform: translateX(140px);
+    
+    
+                                //3depth에는 하위요소가 없기 때문에 after값이 필요 없으므로
+                                //none 처리 해준다.
+                                &::after{
+                                    display: none;
+                                }
+                            }
+    
+    
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*mobile---------------------------*/ 
+@media screen and (max-width:$mobile){
+    .department{
+        .division{
+            background: none;
+            height: auto;
+            //height값 auto 이용해서 초기화
+
+            .div_tree{
+                position: relative;
+                //높이를 그대로 쓰기 위해서 relative
+                //absolute처리 하면 화면에서 떼다가 쓰는거라 높이값이 설정이 자동으로 안됨
+                //그래서 relative를 써야 한다
+                top: 0px;
+                opacity: 1;
+                //반응형에서 살릴거임
+    
+                li{
+                    span{
+                        display: block;
+                        width: 40%;
+                        height: 50px;
+                        background: rgb(17, 17, 17);
+                        font: bold 13px/50px 'arial';
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 25px;
+                        margin-bottom: 20px;
+                        position: relative;
+                        //나머지 자식태그들이 이 안에서만 놀 수 있게 relative 줌
+    
+                        //세로연결선 만들기
+                        //after는 요소 하단에 생성
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: calc(70px * 17 - 25px);
+                            //)height + margin-bottom = 70px) * 하위요소 갯수 17개 - height/2
+                            background: #555;
+                            position: absolute;
+                            top: 50px;
+                            left: 50px;
+                            //뜯어서 위치 선정해주기 위해 absolute를 걸어준다.
+                            
+                        }
+                    }
+    
+                    //2depth
+                    ul li{
+                        span{
+                            background: #666;
+                            transform: translateX(70px);
+                            // 첫번째 ul li 안에 있는 두번재 ul li를 구분 지어 주기 위해 배경색과 위치를 변경해주는 것
+    
+                            //가로연결선 만들기
+                            //before는 요소 상단에 생성
+                            //왜? 1번째는 필요 없으니까 2번째부터 만들기
+                            &::before{
+                                content: '';
+                                display: block;
+                                width: 20px;
+                                height: 1px;
+                                background: #555;
+                                position: absolute;
+                                top: 25px;
+                                left: -20px;
+                            }
+                        }
+    
+                        //2depth li
+                        //1depth li 에서 줬던 after값이 마지막 li까지 공통적으로 적용되어 있으므로 
+                        //해당되는 li에서 따로 after값을 필요한만큼 길이를 조정해줘야한다
+                        &:nth-of-type(1) span::after{
+                            display: none;
+                        }
+                        &:nth-of-type(2) span::after{
+                            display: none;
+                        }
+                        &:nth-of-type(3) span::after{
+                            height: calc(70px * 2 - 25px);
+                        }  
+                        &:nth-of-type(4) span::after{
+                            height: calc(70px * 3 - 25px);
+                        }
+                        &:nth-of-type(5) span::after{
+                            height: calc(70px * 2 - 25px);
+                        }
+                        &:nth-of-type(6) span::after{
+                            height: calc(70px * 3 - 25px);
+                        }
+                        &:nth-of-type(7) span::after{
+                            height: calc(70px * 2 - 25px);
+                        }
+    
+                        //3depth
+                        ul li{
+                            span{
+                                background: #999;
+                                transform: translateX(140px);
+    
+                                //3depth에는 하위요소가 없기 때문에 after값이 필요 없으므로
+                                //none 처리 해준다.
+                                &::after{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

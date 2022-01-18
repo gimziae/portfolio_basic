@@ -1,0 +1,135 @@
+.location{
+    .sub_visual{
+        background: url(../img/brand4.jpg) no-repeat center/cover;
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .inner{
+        #map{
+            width: 100%;
+            height: 500px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+        
+        .traffic{
+            float: left;
+
+            li{
+                float: left;
+                margin-right: 20px;
+
+                a{
+                    display: block;
+                    width: 200px;
+                    height: 40px;
+                    background: #555;
+                    font: bold 12px/40px '맑은 고딕';
+                    color: #fff;
+                    text-align: center;
+                    border: 1px solid #555;
+                }
+
+                &.on a{
+                    background: #333;
+                }
+            }
+        }
+        .branch{
+            float: right;
+
+            li{
+                float: left;
+                margin-left: 10px;
+
+                a{
+                    display: block;
+                    width: 100px;
+                    height: 40px;
+                    background: #555;
+                    font: bold 12px/40px '맑은 고딕';
+                    color: #fff;
+                    text-align: center;
+                    border: 1px solid #555;
+                    border-radius: 20px;
+                }
+
+                &.on a{
+                    background: #fff;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    .location{
+
+        .inner{
+            #map{
+                height: 350px;
+            }
+            
+            .traffic{
+                float: left;
+    
+                li{
+                    float: left;
+                    margin-right: 20px;
+
+                    a{
+                        display: block;
+                        width: 150px;
+                        height: 40px;
+                        background: #555;
+                        font: bold 12px/40px '맑은 고딕';
+                        color: #fff;
+                        text-align: center;
+                        border: 1px solid #555;
+                    }
+    
+                    &.on a{
+                        background: #333;
+                    }
+                }
+            }
+            .branch{
+                float: left;
+                margin-top: 20px;
+                width: 100%;
+    
+                li{
+                    float: left;
+                    margin-left: 0px;
+                    margin-right: 1%;
+                    width: calc(97% / 3);
+    
+                    a{
+                        display: block;
+                        width: 100%;
+                        height: 40px;
+                        background: #555;
+                        font: bold 12px/40px '맑은 고딕';
+                        color: #fff;
+                        text-align: center;
+                        border: 1px solid #555;
+                        border-radius: 20px;
+                    }
+    
+                    &.on a{
+                        background: #fff;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobile){
+    
+}

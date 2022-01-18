@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기업형레이아웃 미디어쿼리 적용</title>
+    <script
+      src="https://kit.fontawesome.com/4f772438c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/gnb.js"></script>
+    <!-- defer 꼭 넣어야해 왜냐면 다 잃고나서 읽어라! 지정해주는 것 -->
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header">
+      <div class="inner">
+        <h1>
+          <a href="index.html">DCODERAB</a>
+        </h1>
+
+        <nav class="menuWeb">
+          <!-- nav에는 스타일 안입힘!!!! -->
+          <ul id="gnb">
+            <li>
+              <a href="department.html">DEPARTMENT</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">2depth1</a></li>
+                  <li><a href="#">2depth1</a></li>
+                  <li><a href="#">2depth1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="youtube.html">YOUTUBE</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">2depth2</a></li>
+                  <li><a href="#">2depth2</a></li>
+                  <li><a href="#">2depth2</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="community.html">COMMUNITY</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">2depth3</a></li>
+                  <li><a href="#">2depth3</a></li>
+                  <li><a href="#">2depth3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="gallery.html">GALLERY</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">2depth4</a></li>
+                  <li><a href="#">2depth4</a></li>
+                  <li><a href="#">2depth4</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="location.html">LOCATION</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">2depth5</a></li>
+                  <li><a href="#">2depth5</a></li>
+                  <li><a href="#">2depth5</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="util">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </nav>
+        <!-- 햄버거 버튼 & 모바일 메뉴 -->
+        <a href="#" class="btnCall">
+          <span>메뉴호출</span>
+        </a>
+        <!--^^a 태그를 이용해 햄버거 버튼 만들기-->
+        <!-- ㅜㅜ클릭 시 따라오는 모바일 메뉴 만들기  -->
+        <nav class="menuMo">
+          <h1>
+            <a href="index.html">DCODELAB</a>
+            <span>UI/UX DEVELOPEMENT INSTITUTE</span>
+          </h1>
+          <ul id="gnbMo">
+            <li><a href="department.html">DEPARTMENT</a></li>
+            <li><a href="youtube.html">YOUTUBE</a></li>
+            <li><a href="community.html">COMMUNITY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="location.html">LOCATION</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- visual -->
+    <figure id="visual">
+      <video src="img/visual.mp4" autoplay loop muted></video>
+      <div class="inner">
+        <h1>INNOVATION</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+          provident exercitationem nobis dolorem quibusdam maiores, labore
+          inventore amet ex necessitatibus! quam perferendis omnis fugit commodi
+          mollitia minus.
+        </p>
+        <a href="#">VIEW OUR PORTFOLIL</a>
+      </div>
+    </figure>
+    <!-- news -->
+    <section id="news">
+      <div class="inner">
+        <h1>RECENT NEWS</h1>
+        <div class="wrap">
+          <article>
+            <div class="pic">
+              <img src="img/news1.jpg" />
+            </div>
+            <h2>
+              <a href="#"></a>
+              Here comes title
+            </h2>
+            <p>
+              Here comes content description in detail.Here comes content
+              description in detail.
+            </p>
+          </article>
+          <article>
+            <div class="pic">
+              <img src="img/news2.jpg" />
+            </div>
+            <h2>
+              <a href="#"></a>
+              Here comes title
+            </h2>
+            <p>
+              Here comes content description in detail.Here comes content
+              description in detail.
+            </p>
+          </article>
+          <article>
+            <div class="pic">
+              <img src="img/news3.jpg" />
+            </div>
+            <h2>
+              <a href="#"></a>
+              Here comes title
+            </h2>
+            <p>
+              Here comes content description in detail.Here comes content
+              description in detail.
+            </p>
+          </article>
+          <article>
+            <div class="pic">
+              <img src="img/news4.jpg" />
+            </div>
+            <h2>
+              <a href="#"></a>
+              Here comes title
+            </h2>
+            <p>
+              Here comes content description in detail.Here comes content
+              description in detail.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- brand -->
+    <section id="brand">
+      <div class="inner">
+        <h1>BRAND IDENTITY</h1>
+        <div class="wrap">
+          <article>
+            <i class="fas fa-barcode"></i>
+            <h2>Brand Identity</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#">VIEW DETAIL</a>
+          </article>
+          <article>
+            <img src="img/brand1.jpg" alt="브랜드1 이미지" />
+          </article>
+          <article>
+            <img src="img/brand2.jpg" alt="브랜드2 이미지" />
+          </article>
+          <article>
+            <img src="img/brand3.jpg" alt="브랜드3 이미지" />
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- banner -->
+    <section id="banner">
+      <div class="inner">
+        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
+          quae itaque expedita, excepturi modi dolorum ad enim alias quasi
+          tenetur?
+        </p>
+      </div>
+    </section>
+
+    <!-- comment -->
+    <section id="comment">
+      <div class="inner">
+        <h1>RECENT COMMENTS</h1>
+        <ul>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+          <li>
+            <a href="#">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              recusandae!
+            </a>
+            <span>2021.12.23</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="inner">
+        <h1>DCODERAP</h1>
+        <ul>
+          <li>
+            <a href="#">Polcy</a>
+          </li>
+          <li>
+            <a href="#">Terms</a>
+          </li>
+          <li>
+            <a href="#">Customer</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+        </ul>
+        <address>
+          Address : DCOELAB ,60, Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Eaque, rem?
+          <br />
+          TEL : +82-2-2100-2114 FAX : +82-2-2100-7999
+        </address>
+        <p>Copyright &copy;2020 DCODELAB ALL Right reserved.</p>
+
+        <!--나의 틀린 답;
+                 <div class="wrap">
+                    <h4>Address : DCOELAB ,60, Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, rem?</h4>
+                    <h4>TEL : +82-2-2100-2114 FAX : +82-2-2100-7999</h4>
+                     <p>Copyright &copy;2020 DCODELAB ALL Right reserved.</p>
+                 </div> -->
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN</title>
+    <!-- 이하로 필수 추가 사항 -->
+    <script src="https://kit.fontawesome.com/4f772438c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/validation.js"></script>
+</head>
+<body>
+    <header id="header_sub">
+        <div class="inner">
+            <h1>
+                <a href="index.html">DCODERAB</a>
+            </h1>
+
+            <nav class="menuWeb">
+                <ul id="gnb">
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+                <ul class="util">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </nav>
+            <!-- 햄버거 버튼 & 모바일 메뉴 -->
+            <a href="#" class="btnCall">
+                <span>메뉴호출</span>
+            </a>
+
+            <nav class="menuMo">
+                <h1>
+                    <a href="index.html">DCODELAB</a>
+                    <span>UI/UX DEVELOPEMENT INSTITUTE</span>
+                </h1>
+                <ul id="gnbMo">
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="content join">
+        <div class="sub_visual"></div>
+        <div class="inner">
+            <!-- 회원가입 양식.. -->
+            <h1>JOIN <span>회원가입</span></h1>
+            <form action="" method="get" id="member">
+                <!-- fieldset 으로 그룹화! 필수요소임 -->
+                <fieldset>
+                    <!-- legend 이름 화면상에선 안보임 -->
+                    <legend class="hidden">회원가입 양식폼</legend>
+                    
+                    <!-- 약관 서약서 -->
+                    <h2><label for="terms"> Terms & Policy</label></h2>
+                    
+                    <textarea name="terms" id="terms"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque asperiores fugiat quidem, porro ratione earum. Sunt vero fuga consequuntur id unde, nulla repellendus exercitationem ea sed odio magnam maxime libero officiis corporis? Laborum assumenda illum totam delectus eveniet praesentium id debitis nihil tempore porro hic ipsam numquam eum dolore ipsum earum dolorem nemo quisquam, officia consequuntur minus harum. Laboriosam dolorum in distinctio ducimus officia nesciunt tempora quas iure consequatur consectetur. Atque, ratione vero? Animi obcaecati voluptate doloremque ab hic beatae libero placeat id? Ducimus harum iusto facere consequatur labore vel enim repellendus, aut mollitia rem, omnis magnam ratione porro hic.
+                    </textarea>
+
+                    <!-- 약관동의 체크박스 -->
+                    <div class="agreement">
+                        <input type="checkbox" name="agree" id="agree">
+                        <label for="agree">약관에 동의합니다.</label>
+                    </div>
+
+                    <!-- 개인정보 입력란 -->
+                    <h2><label for="">MEMBER INFORMATIOM</label></h2>
+
+                    <table>
+                        <caption class="hidden">회원정보 입력양식 테이블</caption>
+                
+                        <!-- th에 scope를 줘서 접근성 높히기 / row > 옆 열과 연관  -->
+                        <!-- ID -->
+                        <tr>
+                            <th scope="row"><label for="id">USER ID</label></th>
+                            <td>
+                                <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요." required>
+                            </td>
+                        </tr>
+                        <!-- PWD -->
+                        <tr>
+                            <th scope="row"><label for="pwd">PASSWORD</label></th>
+                            <td>
+                                <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력해 주세요." required>
+                            </td>
+                        </tr>
+                        <!-- PWD CK -->
+                        <tr>
+                            <th scope="row"><label for="pwd2">RE PASSWORD</label></th>
+                            <td>
+                                <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력해 주세요." required>
+                            </td>
+                        </tr>
+                        <!-- 취미 선택 -->
+                        <tr>
+                            <th scope="row">HOBBY</th>
+                            <td>
+                                <label for="game">
+                                    <input type="checkbox" name="hobby" id="game" value="game">
+                                    GAME
+                                </label>
+                                <label for="music">
+                                    <input type="checkbox" name="hobby" id="music" value="music"> 
+                                    MUSIC
+                                </label>
+                                <label for="reading">
+                                    <input type="checkbox" name="hobby" id="reading" value="reading">
+                                    READING
+                                </label>
+                                <p class="hobbyTxt">취미를 하나 이상 선택해 주세요.</p>
+                            </td>
+                        </tr>
+                        <!-- 성별 선택 -->
+                        <tr>
+                            <th scope="row">GENDER</th>
+                            <td>
+                                <label for="female">
+                                    <input type="radio" name="gender" id="female" value="female">
+                                    FEMALE
+                                </label>
+                                <label for="male">
+                                    <input type="radio" name="gender" id="male" value="male">
+                                    MALE
+                                </label>
+                                <p class="genderTxt">성별을 선택해 주세요.</p>
+                            </td>
+                        </tr>
+                        <!-- 이메일 입력란 -->
+                        <tr>
+                            <th scope="row"><label for="email">EMAIL</label></th>
+                            <td>
+                                <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해 주세요." required>
+                                <select name="company" id="company">
+                                    <option value="naver">@naver.com</option>
+                                    <option value="nate">@nate.com</option>
+                                    <option value="daum">@daum.net</option>
+                                    <option value="self">직접입력</option>
+                                </select>  
+                            </td>
+                        </tr>
+                        <!-- 기타 입력란 -->
+                        <tr>
+                            <th scope="row"><label for="comments">COMMENTS</label></th>
+                            <td>
+                                <textarea name="comments" id="comments" placeholder="코멘트를 입력해 주세요." required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <input type="reset" value="CANCLE">
+                                <input type="submit" value="SUBMIT">
+                            </th>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer_sub">
+        <div class="inner">
+            <h1>DCODERAP</h1>
+            <ul>
+                <li>
+                    <a href="#">Polcy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Customer</a>
+                </li>
+                <li>
+                    <a href="#">Contact us</a>
+                 </li>
+            </ul>
+            <address>
+                Address : DCODELAB ,60, Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, rem?<br/>
+                TEL : +82-2-2100-2114 FAX : +82-2-2100-7999
+            </address>
+            <p>Copyright &copy;2020 DCODELAB ALL Right reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
